@@ -13,12 +13,7 @@ module.exports = function getLoveTrianglesCount(preferences = []) {
 	let c = p[i];
 	let d = p[c-1];
 	let e = p[d-1];
-	  if (b == e) 
-		{
-		delete p[c-1];
-		delete p[d-1];
-		n++;
-		}
+	  if ((b == e) && ((c-1)>i) && ((d-1)>i)) n++;
 	}
 	return n;
   // your implementation
